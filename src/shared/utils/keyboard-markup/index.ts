@@ -131,12 +131,12 @@ const socialsKeyboardMarkup = [
 ];
 
 const startKeyboardMarkup = [
-  [
-    {
-      text: '🌎 Website',
-      url: 'https://amuz-ai.tech/',
-    },
-  ],
+  // [
+  //   {
+  //     text: '🌎 Website',
+  //     url: 'https://amuz-ai.tech/',
+  //   },
+  // ],
   // [
   //   {
   //     text: '🔊 Text to Audio',
@@ -153,10 +153,16 @@ const startKeyboardMarkup = [
   // ],
   [
     {
-      text: '👾 Instructions',
+      text: '📄 Commands',
       callback_data: JSON.stringify({
         command: CallbackInfo.TTG,
       }),
+    },
+  ],
+  [
+    {
+      text: '🌎 Website',
+      url: 'https://trench-ai.com',
     },
   ],
 ];

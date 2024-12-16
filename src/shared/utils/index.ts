@@ -14,10 +14,12 @@ export enum CallbackInfo {
 }
 
 const welcome = `
-*Amuz AI Agent 🌙*
-*Revolutionizing Web3 with Intelligent AI Agents*
+*Trench AI 🪻*
+*A trailblazing AI-powered platform*
 
-Amuz AI Agent transforms how developers, traders, entrepreneurs, and designers navigate the Web3 landscape. Leveraging advanced AI-powered agents, the platform automates complex tasks, accelerates workflows, and amplifies creativity.
+Trench AI is revolutionizing content creation through innovative multimedia solutions. 
+By harnessing state-of-the-art AI technology, Trench AI empowers users with tools that enhance creativity, accessibility, 
+and engagement across various formats.
 `;
 
 const guidline = `
@@ -113,19 +115,10 @@ export function commingSoon(fitur: string) {
 const soon_feature = `*This feature will soon be updated in the near future. Please wait as it is still undergoing improvements by the developer.*`;
 
 const instructions = `
-*Trader*
-- Type anything to get the latest market analysis and trading opportunities!
+*Image Generation*
+Enter your magic words, and let Trench AI Bot turn them into amazing images in an instant! 🎨✨ Try it now!
 
-*Designer*
-- Type your design needs to get inspiration, concepts, or color palettes!
-
-*Developer*
--Type technical questions for quick debugging or coding solutions!
-
-*Entrepreneur*
--Ask anything about business strategies or your startup ideas!
-
-Give it a try, and the Amuz AI Agent is ready to assist your needs quickly and accurately! 🚀
+Experience it for yourself; the Trench AI is here to assist you promptly and accurately! 🚀🚀🚀
 `;
 
 export function detectNumber(text: string) {

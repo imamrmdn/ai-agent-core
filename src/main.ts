@@ -34,7 +34,7 @@ async function getAIResponse(prompt: string): Promise<any> {
   try {
     const completion = await clientOpenAi.images.generate({
       model: "dall-e-3",
-      prompt: "a white siamese cat",
+      prompt,
       n: 1,
       size: "1024x1024",
     });
@@ -73,38 +73,30 @@ async function main() {
     //
     let messageText = msg.text;
     const chatId = msg.chat.id;
-    let match;
-
-    if (msg.caption) {
-      //detect number
-      match = detectNumber(msg.caption);
-    }
-
-    // new feature meme generator
-    const matchMeme = detectTextMeme(msg.text);
 
     //
     if (messageText === '/start') {
       //
       const videoPath =
-        'https://res.cloudinary.com/drmwcjsgc/video/upload/v1733839066/iqwmrblzyybdscrpbehl.mp4';
+        'https://res.cloudinary.com/drmwcjsgc/image/upload/v1734356262/vd2begernkcmbztaijbe.png';
 
-      await bot.sendVideo(chatId, videoPath, keyboardMarkup.welcome as any);
+      await bot.sendPhoto(chatId, videoPath, keyboardMarkup.welcome as any);
     } else {
       let mssg;
 
       bot
-        .sendMessage(chatId, 'generate image...')
+        .sendMessage(chatId, '🔁 build image, please wait a moment...')
         .then((message) => (mssg = message.message_id));
 
       const resp = await getAIResponse(messageText);
-      console.log({ log: resp });
+      console.log({ chatId, log: resp });
 
       if (mssg) {
         bot.deleteMessage(chatId, mssg);
       }
 
-      bot.sendMessage(chatId, 'Image generate in log terminal');
+      bot.sendPhoto(chatId, resp, { caption: '🟢 your image is ready'});
+      //await bot.sendPhoto(chatId, 'https://res.cloudinary.com/drmwcjsgc/image/upload/v1709733882/chronicle/photo-aji.jpg', { caption: '🟢 Your image is ready'});
     }
   });
 
@@ -124,12 +116,12 @@ async function main() {
       case CallbackInfo.MEME:
         bot.sendMessage(chatId, textInfo.commandMeme);
         break;
-      case CallbackInfo.SOON_FITUR:
-        bot.sendMessage(chatId, textInfo.soon_feature, keyboardMarkup.cancel);
-        break;
-      case CallbackInfo.GUID:
-        bot.sendMessage(chatId, textInfo.guidline, keyboardMarkup.cancel);
-        break;
+      // case CallbackInfo.SOON_FITUR:
+      //   bot.sendMessage(chatId, textInfo.soon_feature, keyboardMarkup.cancel as any);
+      //   break;
+      // case CallbackInfo.GUID:
+      //   bot.sendMessage(chatId, textInfo.guidline, keyboardMarkup.cancel);
+      //   break;
       case CallbackInfo.SOCIALS:
         bot.editMessageReplyMarkup(
           {
@@ -141,9 +133,9 @@ async function main() {
           },
         );
         break;
-      case CallbackInfo.DESC:
-        bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel);
-        break;
+      // case CallbackInfo.DESC:
+      //   bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel);
+      //   break;
       case CallbackInfo.BACK:
         bot.editMessageReplyMarkup(
           {
