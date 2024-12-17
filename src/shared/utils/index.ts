@@ -14,13 +14,10 @@ export enum CallbackInfo {
 }
 
 const welcome = `
-* 🪬 LogiX AI Tech 🪬 *
+* Space Terminal 🌒 *
 
-seamlessly integrates into Web3 workflows, enabling innovators to break new ground and optimize efficiency.
-
-Revolutionizing Web3 with AI-Powered Agents
-LogiX redefines how developers, traders, entrepreneurs, and designers engage with the Web3 ecosystem. 
-By harnessing cutting-edge AI agents, the platform simplifies intricate tasks, accelerates processes, and unlocks new levels of innovation.
+In the future, AI won't just be a tool—it'll be as fundamental as electricity or water. 
+A universal knowledge utility, accessible to everyone.
 `;
 
 const guidline = `
@@ -53,14 +50,95 @@ Unleash your creativity with Cryptnative AI! 🌟 #CryptnativeAI #Guidelines #Di
 
 const description = `
 
-*Meme Generator Fun!*
-Generate hilarious memes in seconds. Inject humor into your moments!
+*Let me introduce you to the concept of Space Terminal*
 
-*Trading Companion!*
-Receive real-time market insights, trend analysis, and personalized suggestions, 
-empowering you to make informed decisions!
+1 What is Space Terminal?
 
-Experience limitless creativity now! Start exploring and crafting with *Meme Generator AI*. 🎨✨ \n #UnleashCreativity #DigitalArtistry
+Space Terminal is a decentralized AI utility designed to:
+- Answer any question
+- Collaborate on ideas
+- Solve complex challenges
+- Enable creativity
+
+It's not just a chatbot. It’s the AI backbone of civilization.
+
+2 A Universal Utility 
+
+Think of Space Terminal as:
+
+- A public good
+- Always available
+- Instantly responsive
+
+Whether you're a student, scientist, artist, or CEO Space Terminal adapts to your needs, providing solutions and insights at the speed of thought.
+
+3 Features That Redefine Intelligence 
+
+- Infinite Query: Space Terminal can process ANY question, from simple curiosities to solving interstellar engineering problems.
+
+- Collaboration: Brainstorm, create, and plan with AI as a partner, not just a tool.
+
+- Adaptability: It tailors its responses—explaining science to a child or coding with an expert.
+
+4 Seamless Integration 
+
+Space Terminal isn’t trapped in one app. It’s everywhere:
+
+- Embedded in devices
+- Accessible via voice, holograms, or neural links
+- Powering cities, businesses, and personal growth
+
+Wherever you are, Space Terminal is there.
+
+5 Why is Space Terminal a Utility?
+
+In the future, information is as vital as energy.
+Space Terminal ensures that knowledge, creativity, and innovation are universally available.
+
+It democratizes intelligence. Everyone gets access. No one is left behind.
+
+6 Practical Use Cases 
+
+- Students learn anything, instantly.
+- Scientists solve global crises faster.
+- Writers co-create stories with AI.
+- Engineers design cities in days, not decades.
+- Families plan their lives with AI assistants.
+
+The possibilities? Endless.
+
+7 A New Age of Collaboration 🤝=
+
+Space Terminal doesn’t replace humans. It empowers them.
+
+It enhances human potential, turning every individual into a thinker, a creator, and a solver of problems.
+
+AI utility isn’t about replacing us. It’s about uplifting us.
+
+8 The Ethical Core 
+
+Space Terminal is:
+- Transparent
+- Ethical
+- Governed by diverse voices
+
+Misinformation, bias, and misuse are actively prevented. Space Terminal aligns its outputs to truth, fairness, and respect for all perspectives.
+
+9 Imagine the Future 
+
+No more unanswered questions.
+No more barriers to knowledge.
+No limits to innovation.
+
+Space Terminal isn’t a product. It’s the AI utility that powers a connected, thriving world.
+
+Knowledge isn’t just power—it’s a shared destiny
+
+10 The Space Terminal Age Begins 🔗
+
+What would YOU do with infinite knowledge at your fingertips?
+
+Dream big. The future is here.
 `;
 
 const comming_soon = `*This feature will soon be updated in the near future. Please wait as it is still undergoing improvements by the developer.*`;
@@ -116,19 +194,7 @@ export function commingSoon(fitur: string) {
 const soon_feature = `*This feature will soon be updated in the near future. Please wait as it is still undergoing improvements by the developer.*`;
 
 const instructions = `
-Type anything that inspires you—traders, designers, developers, or entrepreneurs—and let LogiX AI turn it into something extraordinary!
-
-*Trader*
-- An AI-driven trading agent that analyzes market data, detects trading opportunities through predefined rules or adaptive algorithms, and executes buy or sell orders with precision and efficiency.
-
-*Designer*
-- Create NFT concepts and produce visuals customized for blockchain branding and digital identity.
-
-*Developer*
-- Simplify blockchain application development and automate the deployment of smart contracts.
-
-*Entrepreneur*
-- Optimize business operations with AI-driven insights and enable data-informed decision-making for growth and innovation.
+Type any part of the description and discover how Space Terminal brings your ideas to life ✨
 `;
 
 export function detectNumber(text: string) {

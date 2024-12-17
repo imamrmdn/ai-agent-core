@@ -133,12 +133,26 @@ const socialsKeyboardMarkup = [
 const startKeyboardMarkup = [
   [
     {
-      text: '🌎 Website',
-      url: 'https://logix-ai.tech/',
+      text: '📄 Description',
+      callback_data: JSON.stringify({
+        command: CallbackInfo.DESC,
+      }),
+    },
+  ],
+  [
+    {
+      text: '💻 Website',
+      url: 'https://Space-terminal.com',
     },
     {
       text: '🕊 X',
-      url: 'https://x.com/logixaitoken',
+      url: 'https://x.com/SpaceTerminaLx',
+    },
+    {
+      text: '🎅 Instruct',
+      callback_data: JSON.stringify({
+        command: CallbackInfo.TTG,
+      }),
     },
   ],
   // [
@@ -155,14 +169,14 @@ const startKeyboardMarkup = [
   //     }),
   //   },
   // ],
-  [
-    {
-      text: '🤖 Command',
-      callback_data: JSON.stringify({
-        command: CallbackInfo.TTG,
-      }),
-    },
-  ],
+  // [
+  //   {
+  //     text: '🤖 Command',
+  //     callback_data: JSON.stringify({
+  //       command: CallbackInfo.TTG,
+  //     }),
+  //   },
+  // ],
 ];
 
 const welcomeKeyboardMarkup = {

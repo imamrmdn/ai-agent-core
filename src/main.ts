@@ -79,14 +79,14 @@ async function main() {
     if (messageText === '/start') {
 
       const videoPath =
-        'https://res.cloudinary.com/drmwcjsgc/video/upload/v1734424350/i2nwu80n88jj6a7qurni.mp4';
+        'https://res.cloudinary.com/drmwcjsgc/video/upload/v1734435589/yr4uajlf2n8dy6u3xapg.mp4';
 
       await bot.sendVideo(chatId, videoPath, keyboardMarkup.welcome as any);
     } else {
       let mssg;
 
       bot
-        .sendMessage(chatId, 'wait a moment...')
+        .sendMessage(chatId, 'one moment, please...')
         .then((message) => (mssg = message.message_id));
 
       const resp = await getAIResponse(messageText);
@@ -133,9 +133,10 @@ async function main() {
           },
         );
         break;
-      // case CallbackInfo.DESC:
-      //   bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel);
-      //   break;
+      case CallbackInfo.DESC:
+        bot.sendMessage(chatId, textInfo.description);
+        //bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel as any);
+        break;
       case CallbackInfo.BACK:
         bot.editMessageReplyMarkup(
           {
