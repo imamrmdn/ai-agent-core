@@ -14,10 +14,13 @@ export enum CallbackInfo {
 }
 
 const welcome = `
-*Amuz AI Agent 🌙*
-*Revolutionizing Web3 with Intelligent AI Agents*
+* 🪬 LogiX AI Tech 🪬 *
 
-Amuz AI Agent transforms how developers, traders, entrepreneurs, and designers navigate the Web3 landscape. Leveraging advanced AI-powered agents, the platform automates complex tasks, accelerates workflows, and amplifies creativity.
+seamlessly integrates into Web3 workflows, enabling innovators to break new ground and optimize efficiency.
+
+Revolutionizing Web3 with AI-Powered Agents
+LogiX redefines how developers, traders, entrepreneurs, and designers engage with the Web3 ecosystem. 
+By harnessing cutting-edge AI agents, the platform simplifies intricate tasks, accelerates processes, and unlocks new levels of innovation.
 `;
 
 const guidline = `
@@ -113,19 +116,19 @@ export function commingSoon(fitur: string) {
 const soon_feature = `*This feature will soon be updated in the near future. Please wait as it is still undergoing improvements by the developer.*`;
 
 const instructions = `
+Type anything that inspires you—traders, designers, developers, or entrepreneurs—and let LogiX AI turn it into something extraordinary!
+
 *Trader*
-- Type anything to get the latest market analysis and trading opportunities!
+- An AI-driven trading agent that analyzes market data, detects trading opportunities through predefined rules or adaptive algorithms, and executes buy or sell orders with precision and efficiency.
 
 *Designer*
-- Type your design needs to get inspiration, concepts, or color palettes!
+- Create NFT concepts and produce visuals customized for blockchain branding and digital identity.
 
 *Developer*
--Type technical questions for quick debugging or coding solutions!
+- Simplify blockchain application development and automate the deployment of smart contracts.
 
 *Entrepreneur*
--Ask anything about business strategies or your startup ideas!
-
-Give it a try, and the Amuz AI Agent is ready to assist your needs quickly and accurately! 🚀
+- Optimize business operations with AI-driven insights and enable data-informed decision-making for growth and innovation.
 `;
 
 export function detectNumber(text: string) {

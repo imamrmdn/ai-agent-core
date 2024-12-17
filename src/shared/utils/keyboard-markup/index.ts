@@ -134,7 +134,11 @@ const startKeyboardMarkup = [
   [
     {
       text: '🌎 Website',
-      url: 'https://amuz-ai.tech/',
+      url: 'https://logix-ai.tech/',
+    },
+    {
+      text: '🕊 X',
+      url: 'https://x.com/logixaitoken',
     },
   ],
   // [
@@ -153,7 +157,7 @@ const startKeyboardMarkup = [
   // ],
   [
     {
-      text: '👾 Instructions',
+      text: '🤖 Command',
       callback_data: JSON.stringify({
         command: CallbackInfo.TTG,
       }),

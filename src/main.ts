@@ -37,7 +37,7 @@ async function getAIResponse(prompt: string): Promise<any> {
     return completion.choices[0].text.trim();
   } catch (error) {
     console.error('Error with OpenAI API:', error);
-    return 'Error: Unable to process your request at the moment.';
+    return 'We’re unable to process your request right now. Kindly try again shortly.';
   }
 }
 //
@@ -79,14 +79,14 @@ async function main() {
     if (messageText === '/start') {
 
       const videoPath =
-        'https://res.cloudinary.com/drmwcjsgc/video/upload/v1733839066/iqwmrblzyybdscrpbehl.mp4';
+        'https://res.cloudinary.com/drmwcjsgc/video/upload/v1734424350/i2nwu80n88jj6a7qurni.mp4';
 
       await bot.sendVideo(chatId, videoPath, keyboardMarkup.welcome as any);
     } else {
       let mssg;
 
       bot
-        .sendMessage(chatId, 'generate...')
+        .sendMessage(chatId, 'wait a moment...')
         .then((message) => (mssg = message.message_id));
 
       const resp = await getAIResponse(messageText);
@@ -116,12 +116,12 @@ async function main() {
       case CallbackInfo.MEME:
         bot.sendMessage(chatId, textInfo.commandMeme);
         break;
-      case CallbackInfo.SOON_FITUR:
-        bot.sendMessage(chatId, textInfo.soon_feature, keyboardMarkup.cancel);
-        break;
-      case CallbackInfo.GUID:
-        bot.sendMessage(chatId, textInfo.guidline, keyboardMarkup.cancel);
-        break;
+      // case CallbackInfo.SOON_FITUR:
+      //   bot.sendMessage(chatId, textInfo.soon_feature, keyboardMarkup.cancel);
+      //   break;
+      // case CallbackInfo.GUID:
+      //   bot.sendMessage(chatId, textInfo.guidline, keyboardMarkup.cancel);
+      //   break;
       case CallbackInfo.SOCIALS:
         bot.editMessageReplyMarkup(
           {
@@ -133,9 +133,9 @@ async function main() {
           },
         );
         break;
-      case CallbackInfo.DESC:
-        bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel);
-        break;
+      // case CallbackInfo.DESC:
+      //   bot.sendMessage(chatId, textInfo.description, keyboardMarkup.cancel);
+      //   break;
       case CallbackInfo.BACK:
         bot.editMessageReplyMarkup(
           {
